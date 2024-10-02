@@ -1,4 +1,3 @@
-function getResponseFromAPI(){
-	const promise = Promise.resolve(200);
-	return promise;
+export default function getResponseFromAPI() {
+  return new Promise(() => {});
 }
