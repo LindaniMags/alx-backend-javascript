@@ -10,9 +10,9 @@ export default async function handleProfileSignup(
     signUpUser(firstName, lastName),
     uploadPhoto(fileName),
   ]).then((res) =>
-    res.map((obj) => ({
-      status: obj.status,
-      value: obj.status === "fulfilled" ? obj.value : String(obj.reason),
+    res.map((j) => ({
+      status: j.status,
+      value: j.status === "fulfilled" ? j.value : String(j.reason),
     }))
   );
 }
