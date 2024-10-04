@@ -16,15 +16,15 @@ export default class HolbertonClass {
     return this._location;
   }
 
-  set location(location) {
-    this._location = location;
+  set location(loc) {
+    this._location = loc;
   }
 
   [Symbol.toPrimitive](hc) {
-    if (hc === "number") {
+    if (hc === 'number') {
       return this.size;
     }
-    if (hc === "string") {
+    if (hc === 'string') {
       return this.location;
     }
     return this;
