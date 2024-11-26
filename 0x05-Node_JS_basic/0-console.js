@@ -1,13 +1,5 @@
-process.stdout.write("Welcome to Holberton School, what is your name?\n");
+//prints in STDOUT the string argument
 
-process.stdin.on("readable", () => {
-  const chunk = process.stdin.read();
+const displayMessage = (data) => console.log(data);
 
-  if (chunk) {
-    process.stdout.write(`Your name is: ${chunk}`);
-  }
-});
-
-process.stdin.on("end", () => {
-  process.stdout.write("This important software is now closing\n");
-});
+module.exports = displayMessage;
